@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
+    <script defer src="./app.js"></script>
+    <title>Alien_Version_2</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <img src="../Ressources/Egg.svg" alt="Image d\'un oeuf d'alien" class="logo nav-element"></img>
+            <div class="hamburger-container">
+                <div class="hamburger-up"></div>
+                <div class="hamburger-down"></div>
+            </div>
+            <div class="menu-desktop">
+                <a href="#" class="menu-elements-desktop home-desktop menu-primary">Home</a>
+                <a href="#" class="menu-elements-desktop contact-desktop">Contacts</a>
+                <a href="#" class="menu-elements-desktop projects-desktop">Projects</a>
+                <a href="#" class="menu-elements-desktop about-desktop">About</a>
+            </div>
+        </nav>
+    </header>
+    <div class="hamburger-menu">
+        <a class="menu-elements home" href="#">Home</a>
+        <a class="menu-elements contact" href="#">Contact</a>
+        <a class="menu-elements projects" href="#">Projects</a>
+        <a class="menu-elements about" href="#">About</a>
+    </div>
+    <div id="blob"></div>
+    <div class="container-index">
+        <div class="container-index-titles">
+            <h1 class="index-title">In space, no one will hear you code<span class="title-underscore">_</span></h1>
+        </div>
+        <!-- <h2 class="myself">Hi, my name is <span class="mysef-span">Kevin</span></h2> -->
+        <div class="wrapper">
+            <div class="static-txt">I am a :&nbsp;</div>
+            <ul class="dynamic-txts"></ul>
+        </div>
+    </div>
+    <div class="container-contact">
+        <div class="contact-titles">
+            <h2>Si vous voulez me contacter,<br> c'est par ici !</h2>
+        </div>
+        <div class="contact-links">
+            <a href="https://github.com/krousselet" class="logo-github logos" target="_blank"></a>
+            <a href="https://www.facebook.com/profile.php?id=100092565411425" class="logo-fb logos" target="_blank"></a>
+            <a href="https://www.instagram.com/kevin.rousselet/" class="logo-instagram logos" target="_blank"></a>
+            <a href="https://www.linkedin.com/in/kevin-rousselet-304391258/" target='_blank'
+                class="logo-linkedin logos"></a>
+        </div>
+        <div class="form-container">
+            <form action="">
+                <label for="first-name">First Name</label>
+                <input type="text" id="first-name" name="fname" placeholder="Your first name...">
+                <label for="last-name">Last Name</label>
+                <input type="text" id="last-name" name="lname" placeholder="Your last name...">
+                <!-- <label for="country">Country</label>
+                <input type="text" id="country" name="lcountry" placeholder="The country you reside in"> -->
+                <select name="country" id="country">
+                    <option value="europe">Europe</option>
+                    <option value="canada">Canada</option>
+                    <option value="usa">United States of America</option>
+                    <option value="brazil">Brazil</option>
+                </select>
+                <label for="message">Message</label>
+                <textarea name="message" id="message" cols="30" rows="10"
+                    placeholder="Write your message here..."></textarea>
+                <input type="submit" value="Submit" id="submit">
+                <input type="cancel" value="Cancel" id="cancel">
+            </form>
+        </div>
+    </div>
+    <div class="container-about">
+        <div class="about-titles">
+            <h2>A word about me...</h2>
+            <div class="card">
+                <div class="card-top"></div>
+                <div class="card-bottom"></div>
+            </div>
+            <p>I tried to be a <a href="https://www.wattpad.com/user/KevinRousselet" class='writer'
+                    target="_blank">writer</a><br> but fate rolled the dice otherwise...</p>
+        </div>
+        <div class="about-audio-container">
+            <div class="play">
+                <audio class="test" src="../Ressources/Aïcha.mp3"></audio>
+            </div>
+            <div class="pause"></div>
+        </div>
+        <p class="audio-txt">I could have been a musician... but I chose otherwise...</p>
+        <div class="drafter">
+            <img src="../Ressources/Dracofeu.png" alt="Dessin d'un Dracofeu" class="dracofeu">
+            <img src="../Ressources/Chase.png" alt="Dessin de Chase de la Pa'Patrouille" class="chase">
+            <img src="../Ressources/Kratos.png" alt="Dessin de Kratos, GoW" class="kratos">
+            <img src="" alt="Dessin d'un scorpion" class="scorpio">
+        </div>
+        <div class="pilote">
+            <img class="jet" src="../Ressources/jet.jpg" alt="Image">
+            <p class="jet-trigger">Then came the time for me to soar... well so I thought</p>
+        </div>
+    </div>
+    <div class="container-projects">
+        <div class="projects-titles">
+            <h2>Voici la liste de tous les projets accomplis jusqu'ici...</h2>
+        </div>
+        <div class="projects-list">
+            <div class="left-part">
+                <img src="#" alt="Image d'une première intégration">
+                <img src="#" alt="Image d'un projet réalisé avec Bootstrap">
+                <img src="#" alt="Image d'un jeu memory réalisé avec JavaScript">
+            </div>
+            <div class="right-part">
+                <img src="#" alt="Image d'un projet réalisé avec Sass">
+                <img src="#" alt="Image d'un projet design sur Figma">
+                <img src="#" alt="Encore à définir">
+            </div>
+
+
+
+
+        </div>
+    </div>
+</body>
+
+</html>

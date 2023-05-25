@@ -46,7 +46,7 @@ document.body.onpointermove = event => {
 
 // ********************* TEXT ANIMATION JS ************************************* //
 const textDisplay = document.querySelector('.dynamic-txts');
-const textDisplayed = ['Drafter', 'Pianist', 'Developper', 'Novelist', 'Poet', 'Linguist'];
+const textDisplayed = ['Dessinateur', 'Pianiste', 'Developpeur', 'Ecrivain', 'Poete', 'Polyglotte'];
 let i = 0;
 let j = 0;
 let currentText = [];
@@ -269,7 +269,9 @@ projectsDesktop.onclick = function () {
 let play = document.querySelector('.play');
 let pause = document.querySelector('.pause');
 let test = document.querySelector('.test');
-
+let testYiruma = document.querySelector('.test-yiruma');
+let playYiruma = document.querySelector('.play-yiruma');
+let pauseYiruma = document.querySelector('.pause-yiruma');
 card.forEach(card => card.addEventListener('click', function () {
     card.classList.toggle('flip');
 })
@@ -288,7 +290,20 @@ pause.onclick = function () {
 
 }
 
-//******************** PROJECTS VARIABLES ***********************//
+playYiruma.onclick = function () {
+    playYiruma.classList.toggle('play');
+    pauseYiruma.style.display = 'flex';
+    testYiruma.play();
+}
+
+pauseYiruma.onclick = function () {
+    pauseYiruma.style.display = 'none';
+    playYiruma.classList.toggle('play');
+    playYiruma ? testYiruma.pause() : testYiruma.play();
+
+}
+
+//******************** CONTACT VARIABLES ***********************//
 
 let firstName = document.querySelector('#first-name');
 let firstNameValue = firstName.value;
@@ -305,3 +320,58 @@ submit.onclick = function (e) {
     e.preventDefault();
     console.log(firstNameValue, lastNameValue);
 }
+
+// ********************** PROJECT VARIABLES *****************//
+const slides = document.querySelectorAll('.slide');
+let currentSlide = 0, resetSlides = false;
+// Allows a rotation to always have something to display //
+let maxSlide = slides.length - 1;
+const nextSlide = document.querySelector('.btn-next');
+const previousSlide = document.querySelector('.btn-previous');
+
+//*********************** MOVE THE PICTURE OUT OF THE VIEWPORT TO THE RIGHT ********************* */
+
+
+function updateSlides() {
+    slides.forEach((slide, index) => {
+        slide.style.transform = `translateX(${100 * (index - currentSlide)}%)`;
+    })
+}
+
+nextSlide.addEventListener('click', function () {
+    if (currentSlide >= maxSlide) {
+        currentSlide = 0;
+    } else {
+        currentSlide++;
+    }
+    resetSlides = true;
+    updateSlides();
+});
+
+//*********************** MOVE THE PICTURE OUT OF THE VIEWPORT TO THE LEFT ********************* */
+
+previousSlide.addEventListener('click', function () {
+    if (currentSlide <= 0) {
+        currentSlide = maxSlide;
+    } else {
+        currentSlide--;
+    }
+
+    resetSlides = true;
+    updateSlides();
+})
+
+updateSlides();
+
+setInterval(() => {
+
+    if (resetSlides) {
+        resetSlides = false;
+        return;
+    }
+    currentSlide++;
+    if (currentSlide >= maxSlide) {
+        currentSlide = 0;
+    }
+    updateSlides();
+}, 2000);

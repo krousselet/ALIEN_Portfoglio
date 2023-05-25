@@ -22,26 +22,27 @@
             </div>
             <div class="menu-desktop">
                 <a href="#" class="menu-elements-desktop home-desktop menu-primary">Home</a>
-                <a href="#" class="menu-elements-desktop contact-desktop">Contacts</a>
-                <a href="#" class="menu-elements-desktop projects-desktop">Projects</a>
-                <a href="#" class="menu-elements-desktop about-desktop">About</a>
+                <a href="#" class="menu-elements-desktop contact-desktop">Contacter</a>
+                <a href="#" class="menu-elements-desktop projects-desktop">Projets</a>
+                <a href="#" class="menu-elements-desktop about-desktop">A propos</a>
             </div>
         </nav>
     </header>
     <div class="hamburger-menu">
         <a class="menu-elements home" href="#">Home</a>
-        <a class="menu-elements contact" href="#">Contact</a>
-        <a class="menu-elements projects" href="#">Projects</a>
-        <a class="menu-elements about" href="#">About</a>
+        <a class="menu-elements contact" href="#">Contacter</a>
+        <a class="menu-elements projects" href="#">Projets</a>
+        <a class="menu-elements about" href="#">A propos</a>
     </div>
     <div id="blob"></div>
     <div class="container-index">
         <div class="container-index-titles">
-            <h1 class="index-title">In space, no one will hear you code<span class="title-underscore">_</span></h1>
+            <h1 class="index-title">Dans l'espace, personne ne vous entendra coder<span
+                    class="title-underscore">_</span></h1>
         </div>
         <!-- <h2 class="myself">Hi, my name is <span class="mysef-span">Kevin</span></h2> -->
         <div class="wrapper">
-            <div class="static-txt">I am a :&nbsp;</div>
+            <div class="static-txt">Je suis un :&nbsp;</div>
             <ul class="dynamic-txts"></ul>
         </div>
     </div>
@@ -58,72 +59,91 @@
         </div>
         <div class="form-container">
             <form action="">
-                <label for="first-name">First Name</label>
-                <input type="text" id="first-name" name="fname" placeholder="Your first name...">
-                <label for="last-name">Last Name</label>
-                <input type="text" id="last-name" name="lname" placeholder="Your last name...">
+                <label for="first-name"></label>
+                <input type="text" id="first-name" name="fname" placeholder="Prenom...">
+                <label for="last-name"></label>
+                <input type="text" id="last-name" name="lname" placeholder="Nom de famille...">
                 <!-- <label for="country">Country</label>
                 <input type="text" id="country" name="lcountry" placeholder="The country you reside in"> -->
                 <select name="country" id="country">
                     <option value="europe">Europe</option>
                     <option value="canada">Canada</option>
-                    <option value="usa">United States of America</option>
-                    <option value="brazil">Brazil</option>
+                    <option value="usa">Etats Unis d'Amérique</option>
+                    <option value="brazil">Brézil</option>
                 </select>
-                <label for="message">Message</label>
+                <label for="message"></label>
                 <textarea name="message" id="message" cols="30" rows="10"
-                    placeholder="Write your message here..."></textarea>
-                <input type="submit" value="Submit" id="submit">
-                <input type="cancel" value="Cancel" id="cancel">
+                    placeholder="Ecrivez votre message ici..."></textarea>
+                <input type="submit" value="Envoyer" id="submit">
+                <input type="submit" value="Reinitialiser" id="cancel">
             </form>
         </div>
     </div>
     <div class="container-about">
         <div class="about-titles">
-            <h2>A word about me...</h2>
+            <h2>Un mot a mon propos...</h2>
             <div class="card">
                 <div class="card-top"></div>
                 <div class="card-bottom"></div>
             </div>
-            <p>I tried to be a <a href="https://www.wattpad.com/user/KevinRousselet" class='writer'
-                    target="_blank">writer</a><br> but fate rolled the dice otherwise...</p>
+            <p>J'ai voulu être un <a href="https://www.wattpad.com/user/KevinRousselet" class='writer'
+                    target="_blank">ecrivain </a><br>mais le destin en a voulu autrement...</p>
         </div>
         <div class="about-audio-container">
             <div class="play">
                 <audio class="test" src="../Ressources/Aïcha.mp3"></audio>
             </div>
             <div class="pause"></div>
+            <div class="play-yiruma play">
+                <audio class="test-yiruma test" src="../Ressources/Yiruma.mp3"></audio>
+            </div>
+            <div class="pause-yiruma pause"></div>
         </div>
-        <p class="audio-txt">I could have been a musician... but I chose otherwise...</p>
+        <p class="audio-txt">J'aurais pu etre un musicien, mais j'ai choisi autre chose...</p>
         <div class="drafter">
-            <img src="../Ressources/Dracofeu.png" alt="Dessin d'un Dracofeu" class="dracofeu">
-            <img src="../Ressources/Chase.png" alt="Dessin de Chase de la Pa'Patrouille" class="chase">
-            <img src="../Ressources/Kratos.png" alt="Dessin de Kratos, GoW" class="kratos">
-            <img src="" alt="Dessin d'un scorpion" class="scorpio">
+            <img src="../Ressources/Dracofeu.png" alt="Dessin d'un Dracofeu" class="dracofeu about-all-images">
+            <img src="../Ressources/Chase.png" alt="Dessin de Chase de la Pa'Patrouille" class="chase about-all-images">
+            <img src="../Ressources/Kratos.png" alt="Dessin de Kratos, GoW" class="kratos about-all-images">
+            <img src="" alt="Dessin d'un scorpion" class="scorpio about-all-images">
         </div>
-        <div class="pilote">
-            <img class="jet" src="../Ressources/jet.jpg" alt="Image">
-            <p class="jet-trigger">Then came the time for me to soar... well so I thought</p>
-        </div>
+    </div>
     </div>
     <div class="container-projects">
         <div class="projects-titles">
             <h2>Voici la liste de tous les projets accomplis jusqu'ici...</h2>
         </div>
         <div class="projects-list">
-            <div class="left-part">
-                <img src="#" alt="Image d'une première intégration">
-                <img src="#" alt="Image d'un projet réalisé avec Bootstrap">
-                <img src="#" alt="Image d'un jeu memory réalisé avec JavaScript">
+
+
+            <div class="projects-wrapper">
+                <div>
+                    <button class="btn btn-next" type="button" title="Slide right"></button>
+                </div>
+
+                <div>
+                    <button class="btn btn-previous" type="button" title="Slide left"></button>
+                </div>
+                <div class="slide-html slide">
+                    <img src="../Ressources/html.png" alt="Image d'une première intégration">
+                    <p>Première intégration</p>
+                </div>
+                <div class="slide-bootstrap slide">
+                    <img src="../Ressources/Bootstrap.png" alt="Image d'un projet réalisé avec Bootstrap">
+                </div>
+                <div class="slide-sass slide">
+                    <img src="../Ressources/sass.png" alt="Image d'un projet réalisé avec Sass">
+                </div>
+                <div class="slide-figma slide">
+                    <img src="../Ressources/Figma.png" alt="Image d'un projet design sur Figma">
+                </div>
+                <div class="slide-memory slide">
+                    <img src="../Ressources/Memory.png" alt="Image d'un jeu memory réalisé avec JavaScript">
+                </div>
+                <div class="slide-# slide">
+                    <img src="#" alt="Encore à définir">
+                </div>
+
             </div>
-            <div class="right-part">
-                <img src="#" alt="Image d'un projet réalisé avec Sass">
-                <img src="#" alt="Image d'un projet design sur Figma">
-                <img src="#" alt="Encore à définir">
-            </div>
-
-
-
 
         </div>
     </div>

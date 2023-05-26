@@ -44,6 +44,8 @@ document.body.onpointermove = event => {
     blob.style.top = `${clientY}px`;
 }
 
+
+
 // ********************* TEXT ANIMATION JS ************************************* //
 const textDisplay = document.querySelector('.dynamic-txts');
 const textDisplayed = ['Dessinateur', 'Pianiste', 'Developpeur', 'Ecrivain', 'Poete', 'Polyglotte'];
@@ -51,10 +53,6 @@ let i = 0;
 let j = 0;
 let currentText = [];
 let isDeleting = false;
-
-
-//***************************** */ MES FONCTIONS **********************//
-
 
 // *****************************  ECRIRE DES MOTS EN DIFERES DANS LA PAGE ******************** //
 
@@ -266,6 +264,7 @@ projectsDesktop.onclick = function () {
 
 // ******************** ABOUT VARIABLES ******************//
 
+let audioContainer = document.querySelector('.about-audio-container');
 let play = document.querySelector('.play');
 let pause = document.querySelector('.pause');
 let test = document.querySelector('.test');
@@ -281,6 +280,7 @@ play.onclick = function () {
     play.classList.toggle('play');
     pause.style.display = 'flex';
     test.play();
+    testYiruma.play() ? testYiruma.pause() : console.log('Ce n\'est pas bien d\'écouter deux choses à la fois');
 }
 
 pause.onclick = function () {
@@ -294,6 +294,7 @@ playYiruma.onclick = function () {
     playYiruma.classList.toggle('play');
     pauseYiruma.style.display = 'flex';
     testYiruma.play();
+    testYiruma.play() ? test.pause() : console.log('Ce n\'est pas bien d\'écouter deux choses à la fois');
 }
 
 pauseYiruma.onclick = function () {
